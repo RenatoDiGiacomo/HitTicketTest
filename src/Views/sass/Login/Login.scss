@@ -1,0 +1,56 @@
+@import url("../Defaults/_varibles.scss");
+#Login {
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  form {
+    background-color: #e0560015;
+    width: 30%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 1rem;
+    .item {
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem 0;
+      label {
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 0.5rem;
+      }
+      input {
+        border: 1px solid #e05700;
+        border-radius: 6px;
+        height: 1.5rem;
+        padding: .5rem 1rem ;
+        font-size: 1rem;
+      }
+    }
+    .actions {
+      margin-top: 1rem;
+      width: 100%;
+      button {
+        cursor: pointer;
+        width: 100%;
+        background-color: #e05700;
+        border: 1px solid #e05700;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        color: #f3f3f3;
+        font-size: 18px;
+        transition: all 0.2s linear;
+        &:hover {
+          background-color: #f3f3f3;
+          color: #e05700;
+          transition: all 0.2s linear;
+        }
+      }
+    }
+  }
+}
