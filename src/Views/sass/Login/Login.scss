@@ -1,4 +1,3 @@
-@import url("../Defaults/_varibles.scss");
 #Login {
   background-color: #f3f3f3;
   display: flex;
@@ -6,10 +5,11 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  overflow: hidden;
   form {
     background-color: #e0560015;
-    width: 30%;
-    height: 25vh;
+    width: 350px;
+    height: auto;
     display: flex;
     flex-direction: column;
     border-radius: 6px;
@@ -28,7 +28,7 @@
         border: 1px solid #e05700;
         border-radius: 6px;
         height: 1.5rem;
-        padding: .5rem 1rem ;
+        padding: 0.5rem 1rem;
         font-size: 1rem;
       }
     }
@@ -52,5 +52,10 @@
         }
       }
     }
+  }
+  .error {
+    margin-top: 1rem;
+    color: red;
+    font-size: 21px;
   }
 }

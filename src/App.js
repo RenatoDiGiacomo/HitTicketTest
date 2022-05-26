@@ -2,7 +2,7 @@ import React from "react";
 import AppRouter from "./Models/AppRouter";
 
 
-import "./Views/sass/Defaults/App.scss";
+import "./Views/sass/AppStyle/App.scss";
 
 function App() {
   return (

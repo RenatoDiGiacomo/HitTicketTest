@@ -6,21 +6,19 @@ import { AuthContext } from "../../../Controllers/AuthContext";
 import "../../sass/Login/Login.scss";
 
 const Login = () => {
-  const { authenticated, login } = React.useContext(AuthContext);
+  const { login, auth } = React.useContext(AuthContext);
   const [user, setUser] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   const enterSubmit = (e) => {
     e.preventDefault();
     login(user, password);
-    console.log({ user, password });
   };
   return (
     <div id="Login">
       <div className="logo">
         <img src={logo} alt="" />
       </div>
-      <p>{String(authenticated)}</p>
       <form onSubmit={enterSubmit}>
         <div className="item">
           <label htmlFor="login">Nome do Usuário</label>
@@ -46,6 +44,15 @@ const Login = () => {
           <button type="submit">Entrar</button>
         </div>
       </form>
+
+      {auth ? (
+        <div className="error">
+          <p>Usuário e(ou) Senha Incorretos</p>
+          <p>Favor Visualizar o READEME.md(Dev)</p>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
