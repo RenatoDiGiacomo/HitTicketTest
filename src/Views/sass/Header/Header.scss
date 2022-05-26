@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: $orangeLight;
+  box-shadow: $shadow;
+  .left {
+    padding: 1rem;
+    display: inherit;
+    align-items: center;
+    .logo {
+      img {
+        display: block;
+        width: 75px;
+      }
+    }
+    .title {
+      p {
+        font-family: $fontBold;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    .desc {
+      margin-right: 1rem;
+      span {
+        font-family: $fontBold;
+      }
+    }
+    .logout {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      svg {
+        width: 20px;
+        path {
+          fill: black;
+          transition: all 0.2s linear;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            fill: $warning;
+            transition: all 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+}

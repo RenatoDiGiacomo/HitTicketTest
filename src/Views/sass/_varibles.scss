@@ -1,0 +1,31 @@
+//fonts
+@font-face {
+  font-family: "OpenSans";
+  src: url("../../Views/fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../../Views/fonts/OpenSans-Bold.ttf");
+}
+$font: "OpenSans";
+$fontBold: "OpenSansBold";
+
+//colors
+$white: #f3f3f3;
+$black: #000;
+$orangeLight: #e0560015;
+$orange: #e05700;
+$aproved: #008628;
+$warning: #ff0000;
+$called: #878e00;
+
+//font Sizes
+
+$f16: 1rem;
+$f18: 1.125rem;
+$f21: 1.3125rem;
+$f26: 1.625rem;
+$f31: 1.9375rem;
+
+//Shadow
+$shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);

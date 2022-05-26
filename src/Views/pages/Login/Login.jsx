@@ -3,7 +3,7 @@ import logo from "../../imgs/logo.jpg";
 
 import { AuthContext } from "../../../Controllers/AuthContext";
 
-import "../../sass/Login/Login.scss";
+import "../../sass/Style.scss";
 
 const Login = () => {
   const { login, auth } = React.useContext(AuthContext);

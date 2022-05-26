@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-d
 
 import { AuthProvider, AuthContext } from "../Controllers/AuthContext";
 
-import Home from "../Views/pages/Home/Home";
+import Dashboard from "../Views/pages/Dashboard/Dashboard";
 import Login from "../Views/pages/Login/Login";
 
 const AppRouter = () => {
@@ -28,7 +28,7 @@ const AppRouter = () => {
             path="/"
             element={
               <Private>
-                <Home />
+                <Dashboard />
               </Private>
             }
           />
