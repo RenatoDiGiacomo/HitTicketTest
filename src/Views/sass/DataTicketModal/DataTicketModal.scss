@@ -1,0 +1,61 @@
+#modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $greyLightOver;
+  .content {
+    position: relative;
+    width: 25%;
+    min-width: 500px;
+    padding: 1rem;
+    margin: 200px auto 0;
+    background-color: $white;
+    display: flex;
+    flex-wrap: nowrap;
+    .contactImg {
+      margin-right: 1rem;
+      width: 100px;
+      height: 100px;
+      border: 1px solid $grey;
+      border-radius: 50%;
+      img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .contactData {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      p {
+        font-family: $fontBold;
+        margin: 1rem 0;
+      }
+      span {
+        display: block;
+      }
+      .contactInfo {
+        margin-bottom: 1rem;
+      }
+    }
+    .close {
+      cursor: pointer;
+      background-color: $warning;
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 20px;
+      height: 20px;
+      padding: 0.5rem;
+      border-radius: 50%;
+      text-align: center;
+      color: $white;
+      font-size: $f18;
+    }
+  }
+}

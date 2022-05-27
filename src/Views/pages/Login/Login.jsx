@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../imgs/logo.jpg";
+import logo from "../../imgs/logo.png";
 
 import { AuthContext } from "../../../Controllers/AuthContext";
 

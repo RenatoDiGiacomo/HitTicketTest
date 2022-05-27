@@ -1,0 +1,58 @@
+#title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $greyLight;
+  h2 {
+    color: $orange;
+  }
+  .filter {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    .orientation {
+      display: flex;
+      margin-right: 1.5rem;
+      cursor: pointer;
+      div {
+        svg {
+          path {
+            transition: all 0.2s linear;
+          }
+        }
+        &.active {
+          svg {
+            path {
+              fill: $aproved;
+              transition: all 0.2s linear;
+            }
+          }
+        }
+        &:hover {
+          @for $i from 1 through 2 {
+            &:nth-child(#{$i}) {
+              svg {
+                path {
+                  fill: $orange;
+                  transition: all 0.2s linear;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    select {
+      width: 100%;
+      padding: .3rem;
+      min-width: 100px;
+      font-family: $fontBold;
+      margin-bottom: 0.5rem;
+      border: 1px solid $greyLight;
+    }
+  }
+}

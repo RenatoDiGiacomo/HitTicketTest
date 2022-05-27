@@ -1,23 +1,28 @@
 //fonts
 @font-face {
-  font-family: "OpenSans";
-  src: url("../../Views/fonts/OpenSans-Regular.ttf");
+  font-family: "Roboto";
+  src: url("../../Views/fonts/Roboto-Regular.ttf");
 }
 @font-face {
-  font-family: "OpenSansBold";
-  src: url("../../Views/fonts/OpenSans-Bold.ttf");
+  font-family: "RobotoBold";
+  src: url("../../Views/fonts/Roboto-Bold.ttf");
 }
-$font: "OpenSans";
-$fontBold: "OpenSansBold";
+
+$font: "Roboto";
+$fontBold: "RobotoBold";
 
 //colors
 $white: #f3f3f3;
-$black: #000;
-$orangeLight: #e0560015;
-$orange: #e05700;
-$aproved: #008628;
-$warning: #ff0000;
-$called: #878e00;
+$blackDark: #252525;
+$black: #25272b;
+$grey: #32353a;
+$greyLight: #8b8b8b;
+$greyLightOver: #8b8b8bb4;
+$orange: #e25000;
+$orangeLight: #e24f00b5;
+$aproved: #007423;
+$warning: #d30101;
+$called: #f2ff00;
 
 //font Sizes
 

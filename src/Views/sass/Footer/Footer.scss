@@ -4,10 +4,11 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: $orange;
+  background-color: $grey;
   justify-content: end;
   padding: 1rem 0;
   p {
+    color: $greyLight;
     padding-right: 1rem;
     span{
         font-family: $fontBold;

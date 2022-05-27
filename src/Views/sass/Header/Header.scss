@@ -1,13 +1,15 @@
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: auto;
-  background-color: $orangeLight;
+  background-color: $black;
   box-shadow: $shadow;
+  color: $white;
   .left {
-    padding: 1rem;
+    padding: .3rem 1rem;
     display: inherit;
     align-items: center;
     .logo {
@@ -17,6 +19,7 @@ header {
       }
     }
     .title {
+      margin-left: 1rem;
       p {
         font-family: $fontBold;
       }
@@ -25,7 +28,7 @@ header {
   .right {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: .3rem 1rem;
     .desc {
       margin-right: 1rem;
       span {
@@ -37,16 +40,16 @@ header {
       display: flex;
       align-items: center;
       svg {
-        width: 20px;
+        width: 30px;
         path {
-          fill: black;
+          fill: $white;
           transition: all 0.2s linear;
         }
       }
       &:hover {
         svg {
           path {
-            fill: $warning;
+            fill: $orange;
             transition: all 0.2s linear;
           }
         }

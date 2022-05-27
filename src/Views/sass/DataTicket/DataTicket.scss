@@ -1,0 +1,70 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  &.column {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    .attBlock{
+      min-width: 95% ;
+      .desc{
+        text-align: left;
+      }
+    }
+  }
+  .attBlock {
+    width: 28%;
+    min-width: 370px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: $shadow;
+    background-color: $white;
+    .desc {
+      text-align: left;
+      p {
+        margin: 1rem 0;
+        font-family: $fontBold;
+        text-transform: capitalize;
+        & > span {
+          display: block;
+        }
+      }
+      .completeDesc{
+        cursor: pointer;
+        text-align: right;
+        color: $orange;
+        transition: all .2s linear;
+        &:hover{
+          text-decoration: underline;
+          transition: all .2s linear;
+        }
+      }
+    }
+    .status {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem 0.3rem;
+      border-radius: 0px 6px 0px 6px;
+      text-transform: capitalize;
+      color: $white;
+      box-shadow: $shadow;
+      font-family: $fontBold;
+      &.open {
+        background-color: $aproved;
+      }
+      &.closed {
+        background-color: $warning;
+      }
+      &.pending {
+        background-color: $called;
+        color: $black;
+      }
+    }
+  }
+}

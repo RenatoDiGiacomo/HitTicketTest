@@ -1,53 +1,39 @@
 import React from "react";
-import moment from "moment";
 import db from "../../../data/data.json";
+import TitleFilter from "./TitleFilter/TitleFilter";
+import DataTicket from "./DataTicket/DataTicket";
+
 import "../../sass/Style.scss";
+import DataTicketModal from "./DataTicketModal/DataTicketModal";
 
 const Main = () => {
   const [data, setData] = React.useState(null);
   const [filter, setFilter] = React.useState("");
+  const [orientation, setOrientation] = React.useState(false);
+  const [modal, setModal] = React.useState(false);
+  const [itemModal, setItemModal] = React.useState(null);
 
   React.useEffect(() => {
-    console.log();
     setData(db.tickets);
   }, []);
-
   return (
-    <main>
-      <div className="title">
-        <h2>Página Inicial</h2>
-        <div className="filter">
-          <label htmlFor="status">Filter por Status do Chamado:</label>
-          <select name="" id="status" onChange={(e) => setFilter(e.target.value)}>
-            <option value="">-Selecione o filtro-</option>
-            <option value="closed">Fechados</option>
-            <option value="open">Abertos</option>
-            <option value="pending">Pendentes</option>
-          </select>
-        </div>
-      </div>
-      <div className="content">
-        {data &&
-          data
-            .filter((item) => {
-              if (filter === "") return item;
-              return item.status === filter;
-            })
-            .map((item) => (
-              <div className="attBlock" key={item.id}>
-                <div className="desc">
-                  <p>Contato: {item.contact.name}</p>
-                  <p>
-                    Atendimento Criado:
-                    {moment(item.createdAt).format("DD/MM/YYYY")} <span> - </span>
-                    {moment.parseZone(item.createdAt).format("HH:mm:ss")}
-                  </p>
-                </div>
-                <div className="status" style={{backgroundColor:"red"}}>{item.status}</div>
-              </div>
-            ))}
-      </div>
-    </main>
+    <>
+      <main>
+        <TitleFilter
+          setFilter={setFilter}
+          setOrientation={setOrientation}
+          orientation={orientation}
+        />
+        <DataTicket
+          data={data}
+          filter={filter}
+          orientation={orientation}
+          setModal={setModal}
+          setItemModal={setItemModal}
+        />
+      </main>
+      <DataTicketModal data={data} modal={modal} setModal={setModal} itemModal={itemModal} />
+    </>
   );
 };
 
